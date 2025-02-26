@@ -1,17 +1,3 @@
-/* in order:
-1- animation-name: ;
-2- animation-duration: 1s;
-3- animation-timing-function: ease;
-4- animation-delay: 1s;
-5- animation-iteration-count: 1+ or infinite for a loop;
-6- animation-direction: normal, reverse o alternate;
-animation-fill-mode: forwards; it stays as the last keyframe
-animation-play-state: running or pause;
-*/
-
-
-
-
 .testata{
     animation: opening 1s ease normal;
 }
