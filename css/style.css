@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+} /* generalita' */
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 3rem;
+} /* generalita' */
+
+:root{
+    ---white: #f5f5f5;
+    ---underline: rgba(255, 255, 255, 0.6);
+    ---caffe: #F2F1EB;
+    ---grey: #505050;
+    ---dark-green: #608967;
+} /* colori */
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    height: auto;
+} /* generale immagini */
+
+body{
+    margin: auto;
+    background-color: var(---caffe);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* INIZIO HEADER E NAV */
+header{
+    margin: auto;
+    max-width: 1440px;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    margin: auto;
+    max-width: 1440px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: var(---caffe);
+    transition: top 1s;
+    z-index: 10;
+}
+
+.divisorio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    font-size: 0.75rem;
+    padding: 0.313rem 0.625rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.625rem;
+    border: 1px solid var(---grey);
+    transition: all .7s;  
+}
+
+nav a:not(.login){
+    color: var(---grey);
+}
+
+.login{
+    color: var(---white);
+    background-color: var(---dark-green);
+    transition: all .7s;
+}
+
+nav a:hover:not(.login){
+    color: var(---white);
+    background-color: var(---dark-green);
+    border: 1px solid var(---dark-green);
+}
+
+.login:hover{
+    color: var(---grey);
+    background-color: var(---caffe);
+}
+/* fine nav */
+
+
+
+
+/* INIZIO GENERALITA' SEZIONI */
+section{
+    margin: auto;
+    max-width: 1440px;
+    padding: 6rem 1rem;
+}
+
+.sezione-colorata{
+    background-color: var(---dark-green);
+}
+
+
+.fedezcacca{
+    max-width: 1100px;
+    padding: 0 1rem;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 5rem;
+    padding: 0 1rem;
+} /* sezione flex */
+
+.reverse{
+    flex-direction: row-reverse;
+}
+/* fine generalita' sezioni */
+
+
+
+
+/*  INIZIO SEZIONI DI TESTO */
+.hero{
+    display: flex;
+    margin: auto;
+    max-width: 1100px;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    text-align: center;
+} /* sezioni hero */
+
+.testo{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 0 4rem 0;
+} /* testo home */
+
+.testo ul{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+} /* lista nella pagina parchi */
+
+.lungo{
+    align-items: center;
+} /* 2 nome .testo home */
+
+.lungo p{
+    text-align: right;
+    max-width: 50%;
+} /* 2 nome .testo home */
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40%;
+} /* testo pagine non home */
+
+.text p{
+    text-align: justify left;
+} /* testo pagine non home */
+
+h2{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+/* fine generalita' sezioni di testo */
+
+
+
+
+.immagine-di-base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* INIZIO TESTATA */
+.testata{
+    max-width: 1100px;
+    margin-top: 4rem;
+}
+
+.testata-gradient{
+    position: relative;
+}
+
+.testata img{
+    border-radius: 30px;
+}
+
+.gradient{
+    position: absolute;
+    inset: 0;
+    background-color: rgba( 0,0,0,.3);
+    border-radius: 30px;
+}
+
+h1{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: var(---white);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h1lungo{
+    font-size: 3rem;
+}
+/* fine testata */
+
+
+
+
+/* CARDS */
+.card{
+    position: relative;
+    max-width: 550px;
+} /* generalissimo */
+
+.card.informazioni{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+} /* sezione informazioni */
+
+section img{
+    border-radius: 1rem;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba( 0,0,0,.5);
+    border-radius: 1rem;
+    list-style: none;
+    transition: .7s ease-in-out;
+    opacity: 0;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.overlay a{
+    position: absolute;
+    text-transform: uppercase;
+    color: var(---white);
+    font-size: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-decoration: underline var(---underline);
+}
+
+.overlay a::before{
+    content: "vai a: ";
+}
+/* fine card */
+
+
+/* CARD GRID HOME */
+
+div.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div.grid div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* fine card grid home */
+
+
+
+
+/* INIZIO FOOTER */
+
+footer{
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
+    padding: 2rem 0;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(---dark-green);
+}
+
+footer ul{
+    display: flex;
+    gap: 1rem;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer a{
+    color: var(---white);
+    font-size: 0.75rem;
+    padding: 0.313rem 0.625rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.625rem;
+    border: 1px solid var(---white);
+    transition: all .7s;
+}
+
+footer a:hover{
+    color: var(---grey);
+    background-color: var(---white);
+}
+/* fine footer */
+
+/* inizio responsive */
+
+@media (max-width: 527px)
+{
+    nav{
+        padding: 1rem 2rem;
+    }
+
+    .divisorio{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 425px)
+{
+    nav{
+        padding: 1rem 2rem;
+    }
+
+    .divisorio{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section{
+        padding: 3rem 1rem;
+    }
+
+    .testata{
+        margin-top: 7rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .h1lungo{
+        font-size: 2rem;
+    }
+
+    .hero{
+        max-width: 80%;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .testo{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 1rem 0;
+    }
+
+    .testo ul{
+        padding-top: 0;
+    }
+
+    .lungo p{
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .overlay a{
+        font-size: .75rem;
+    }
+
+    .flex{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
+    }
+
+    .text{
+        justify-content: flex-start;
+        max-width: 100%;
+    } /* testo pagine non home */
+    
+    .text p{
+        text-align: justify right;
+    }
+
+    div.grid{
+        gap: .5rem;
+    }
+    
+    div.grid div{
+        gap: .5rem;
+    }
+}
+
+@media (max-width: 351px)
+{
+    nav a{
+        font-size: .625rem;
+    }
+
+    nav ul{
+        gap: .5rem;
+    }
+}
